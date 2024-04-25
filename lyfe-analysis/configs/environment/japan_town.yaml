@@ -1,0 +1,21 @@
+type: unity
+
+map:
+    - Convenience Store
+    - Izakaya Bar
+    - Flower Shop
+    - Sushi Restaurant
+    - Seafood Restaurant
+    - Ramen Shop
+    - Library
+    - Corner Izakaya
+    - Post Office
+    - Hotel
+
+frame_rate: 60
+sim_speed: 1000
+world_time:
+    year: 2020
+    month: 1
+    day: 1
+    hour: 7

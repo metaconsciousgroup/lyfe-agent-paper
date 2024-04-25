@@ -1,0 +1,25 @@
+# Demo for Unity
+
+# Defaults to load configs from
+defaults:
+    - agents: murdermystery.yaml
+    - general: base_general.yaml
+    - environment: japan_town.yaml
+    - _self_
+
+# Adding new configs
+name: coherent # name of experiment
+general:
+    max_iter: 5000000 # 100000
+    max_time: 300 # in seconds
+
+brain: base_brain
+
+environment:
+    sim_speed: 600
+
+# Hydra settings
+hydra:
+    mode: MULTIRUN
+    job:
+        chdir: true

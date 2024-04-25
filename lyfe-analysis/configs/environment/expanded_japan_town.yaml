@@ -1,0 +1,24 @@
+type: unity # choose from [conversation, unity]
+
+map:
+    - Chinese Restaurant
+    - Train Station
+    - Post Office
+    - Small Park
+    - Corner Bar
+    - Corner Izakaya
+    - Flower Shop
+    - Seafood Restaurant
+    - Ramen Shop
+    - Library
+    - Hotel
+    - Grocery Store
+
+
+frame_rate: 60
+sim_speed: 1000
+world_time:
+    year: 2023
+    month: 11
+    day: 5
+    hour: 7

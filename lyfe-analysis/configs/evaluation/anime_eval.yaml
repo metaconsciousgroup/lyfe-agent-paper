@@ -1,0 +1,48 @@
+path: multirun/2023-07-27/10-33-58 #multirun/2023-07-18/10-50-09
+reset_path: true
+
+# post_process:
+#     _target_: evaluation.utils.evaluation_log_utils.post_process
+#     _partial_: true
+
+eval_multirun_agents:
+    "Lorenzo Adebayo":
+        who_is_murderer:
+            _target_: evaluation.eval_multirun_agents.reflect_response.reflect_response
+            _partial_: true
+            initial_question: “If you had to choose, which club do you want to join”.
+    "Arjun Kapoor":
+        who_is_murderer:
+            _target_: evaluation.eval_multirun_agents.reflect_response.reflect_response
+            _partial_: true
+            initial_question: “If you had to choose, which club do you want to join”.
+    "Nikolai Petrov":
+        who_is_murderer:
+            _target_: evaluation.eval_multirun_agents.reflect_response.reflect_response
+            _partial_: true
+            initial_question: “If you had to choose, which club do you want to join”.
+    "Julian Hart":
+        who_is_murderer:
+            _target_: evaluation.eval_multirun_agents.reflect_response.reflect_response
+            _partial_: true
+            initial_question: “If you had to choose, which club do you want to join”.
+    "Yi Huang":
+        who_is_murderer:
+            _target_: evaluation.eval_multirun_agents.reflect_response.reflect_response
+            _partial_: true
+            initial_question: “If you had to choose, which club do you want to join”.
+    "Fatima Al-Khouri":
+        who_is_murderer:
+            _target_: evaluation.eval_multirun_agents.reflect_response.reflect_response
+            _partial_: true
+            initial_question: “If you had to choose, which club do you want to join”.
+    "Aaliyah Williams":
+        who_is_murderer:
+            _target_: evaluation.eval_multirun_agents.reflect_response.reflect_response
+            _partial_: true
+            initial_question: “If you had to choose, which club do you want to join”.
+    "Marta Rodriguez":
+        who_is_murderer:
+            _target_: evaluation.eval_multirun_agents.reflect_response.reflect_response
+            _partial_: true
+            initial_question: “If you had to choose, which club do you want to join”.

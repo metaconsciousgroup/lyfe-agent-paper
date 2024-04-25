@@ -1,0 +1,11 @@
+{
+    "workmem": [
+        "Working memory number 1"
+    ],
+    "recentmem": [
+        "recent memory number 2"
+    ],
+    "longmem": [
+        "long memory number 3"
+    ]
+}

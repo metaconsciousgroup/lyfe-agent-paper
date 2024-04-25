@@ -1,0 +1,15 @@
+type: virtual # choose from [virtual, unity]
+name: conversation # Name of Environment
+
+map: lyfe_bench.environments.testbed_env.maps.complete_map_graphs.japan_town
+
+_target_: environments.virtual_env.env
+_partial_: true
+enable_location: true
+frame_rate: 60
+sim_speed: 1000
+world_time:
+    year: 2020
+    month: 1
+    day: 1
+    hour: 7

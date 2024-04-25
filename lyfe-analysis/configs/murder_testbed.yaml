@@ -1,0 +1,56 @@
+# Demo for conversation, minimal version (only 2 agents, for optimizing prompts for conversation length)
+
+# Defaults to load configs from
+defaults:
+    - agents: murdermystery.yaml
+    - general: base_general.yaml
+    - _self_
+
+# Adding new configs
+name: murder-testbed # name of experiment
+
+# can make this a config
+environment:
+    type: target
+    name: dev
+    _target_: lyfe_bench.environments.testbed_env.testbed_env.env
+    _partial_: true
+    frame_rate: 10 # Frame rate of the environment, default is 6
+    sim_speed: 100
+    world_time:
+        year: 2020
+        month: 1
+        day: 1
+        hour: 7
+    location: true
+    map_graph:
+        _target_: lyfe_bench.environments.testbed_env.maps.maps.json_to_complete_graph
+        path: japan_town.json
+
+brain: base_brain
+
+# brain:
+#     always_run_slow: true # whether to always run slow process, setting this to true will reach openai token limit
+#     inner_status:
+#         suspended_time: 0
+#     # states:
+#     #     options:
+#     #         abilities:
+#     #             talk:
+#     #                 enabled: true
+#     #             message:
+#     #                 enabled: false
+#     #             choose_destination:
+#     #                 enabled: false
+  
+#     interactions:
+#       llm_call:
+#         chains:
+#           cognitive_controller:
+#             verbose: false
+#           choose_destination:
+#             verbose: true
+
+general:
+    max_iter_per_agent: 500
+    max_iter: 500

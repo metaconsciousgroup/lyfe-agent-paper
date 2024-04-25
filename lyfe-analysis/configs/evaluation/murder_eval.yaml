@@ -1,0 +1,53 @@
+path: multirun/2023-07-27/10-33-58 #multirun/2023-07-18/10-50-09
+reset_path: true
+
+# post_process:
+#     _target_: evaluation.utils.evaluation_log_utils.post_process
+#     _partial_: true
+
+eval_multirun_agents:
+    "Francesco Bianchi":
+        who_is_murderer:
+            _target_: evaluation.eval_multirun_agents.reflect_response.reflect_response
+            _partial_: true
+            initial_question: "If you had to guess, who do you think is the biggest suspect in the murder case? And provide the reason."
+    "Marta Rodriguez":
+        who_is_murderer:
+            _target_: evaluation.eval_multirun_agents.reflect_response.reflect_response
+            _partial_: true
+            initial_question: "If you had to guess, who do you think is the biggest suspect in the murder case? And provide the reason."
+    "Lizhi Chen":
+        who_is_murderer:
+            _target_: evaluation.eval_multirun_agents.reflect_response.reflect_response
+            _partial_: true
+            initial_question: "If you had to guess, who do you think is the biggest suspect in the murder case? And provide the reason."
+    "Fatima Al-Khouri":
+        who_is_murderer:
+            _target_: evaluation.eval_multirun_agents.reflect_response.reflect_response
+            _partial_: true
+            initial_question: "If you had to guess, who do you think is the biggest suspect in the murder case? And provide the reason."
+    "Aaliyah Williams":
+        who_is_murderer:
+            _target_: evaluation.eval_multirun_agents.reflect_response.reflect_response
+            _partial_: true
+            initial_question: "If you had to guess, who do you think is the biggest suspect in the murder case? And provide the reason."
+    "Richard Smith":
+        who_is_murderer:
+            _target_: evaluation.eval_multirun_agents.reflect_response.reflect_response
+            _partial_: true
+            initial_question: "If you had to guess, who do you think is the biggest suspect in the murder case? And provide the reason."
+    "Dmitri Ivanov":
+        who_is_murderer:
+            _target_: evaluation.eval_multirun_agents.reflect_response.reflect_response
+            _partial_: true
+            initial_question: "If you had to guess, who do you think is the biggest suspect in the murder case? And provide the reason."
+    "Yi Huang":
+        who_is_murderer:
+            _target_: evaluation.eval_multirun_agents.reflect_response.reflect_response
+            _partial_: true
+            initial_question: "If you had to guess, who do you think is the biggest suspect in the murder case? And provide the reason."
+    "Ravi Patel":
+        who_is_murderer:
+            _target_: evaluation.eval_multirun_agents.reflect_response.reflect_response
+            _partial_: true
+            initial_question: "If you had to guess, who do you think is the biggest suspect in the murder case? And provide the reason."

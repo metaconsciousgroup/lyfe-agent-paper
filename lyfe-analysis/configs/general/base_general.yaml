@@ -1,0 +1,10 @@
+max_iter: 100000
+max_iter_per_agent: 2500
+max_time: 300 # in seconds
+seed: 0
+checkpoint: 1000
+#start: ""
+
+analysis: true
+
+collect_data: true

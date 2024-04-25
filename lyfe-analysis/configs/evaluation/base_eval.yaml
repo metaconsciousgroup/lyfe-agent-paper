@@ -1,0 +1,11 @@
+path: multirun/2023-07-19/09-06-00 #multirun/2023-07-18/10-50-09
+reset_path: true
+
+post_process:
+    _target_: evaluation.utils.evaluation_log_utils.post_process
+    _partial_: true
+
+# eval_run:
+#     temporal_analysis: 
+#         _target_: evaluation.utils.evaluation_plot_utils.temporal_analysis
+#         _partial_: true

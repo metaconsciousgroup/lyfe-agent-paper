@@ -1,0 +1,34 @@
+name: gen
+channels:
+    # - anaconda # IMPORTANT TO ADD THIS FOR sentence_transformers
+    - conda-forge
+    - defaults
+dependencies:
+    - python==3.9
+    - pip
+    - openai # OpenAI API
+    - pytest
+    - pytest-mock
+    - pip:
+          - hydra-core # Meta AI hydra job/configuration management
+          # - gymnasium # OpenAI/Farama Foundation Gym environment
+          - seaborn # seaborn plotting
+          - scikit-learn
+          # For developers
+          - pytest-mock
+          - django-environ
+          - shapely
+          - geopandas
+          - networkx
+          - langchain # alternative LLM: LangChain (compatible with GPT and Vicuna)
+          - langchain-openai
+          - black
+          - python-dotenv # For loading .env files
+          - boto3 # For interaction with AWS
+          - nltk
+          - numpy
+          - pandas
+          - pillow
+          - plotly
+          - psutil
+          - scipy
