@@ -1,0 +1,10 @@
+[
+    {
+        "code": "bot.chat('Hello, world!');"
+    },
+
+    {
+        "code": "bot.chat('Hello, world!');"
+    }
+
+]

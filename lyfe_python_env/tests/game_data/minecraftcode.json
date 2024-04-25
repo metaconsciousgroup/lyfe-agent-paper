@@ -1,0 +1,45 @@
+{
+	"messageType": "GAME_DATA",
+    "lobby": {
+        "location":
+        {
+            "hashId": "location_id_abc_1234",
+            "name": "City (Day)",
+            "sceneName": "LevelCity - Day"
+        },
+        "characters": [
+            {
+                "modelPath": "https://models.readyplayer.me/64b06985c0cd89901193ed59.glb"
+            },
+            {
+                "modelPath": "https://models.readyplayer.me/64b068e6dd9942dce7fa044c.glb"
+            }
+        ]
+    },
+    "world": {
+        "agents": [
+            {
+                "hashId": "agent_001",
+                "user": {
+                    "hashId": "francesco_bianchi",
+                    "username": "ExampleAgent One"
+                },
+                "character": {
+                    "modelPath": "https://models.readyplayer.me/64b06985c0cd89901193ed59.glb"
+                },
+                "transform": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "rotation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    }
+                }
+            }
+        ]
+    }    
+}

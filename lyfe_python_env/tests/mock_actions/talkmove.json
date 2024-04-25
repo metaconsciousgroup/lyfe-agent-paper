@@ -1,0 +1,134 @@
+[
+    {
+        "talk": "I love my job as a postman!",
+        "message": null,
+        "choose_destination": null,
+        "anim": "Talking",
+        "send": null
+    },
+    {
+        "talk": "Wow, that's awesome!",
+        "message": null,
+        "choose_destination": null,
+        "anim": "Talking",
+        "send": null
+    },
+    {
+        "talk": "Wow, that's awesome!",
+        "message": null,
+        "choose_destination": null,
+        "anim": "Talking",
+        "send": null
+    },
+    {
+        "talk": null,
+        "message": null,
+        "choose_destination": "Library",
+        "anim": "Walking",
+        "look_at": "<unity_player_id>",
+        "send": null
+    },
+    {
+        "talk": null,
+        "message": null,
+        "choose_destination": "Izakaya Bar",
+        "anim": "Walking",
+        "send": null
+    },
+    {
+        "talk": "I love practicing kendo in the evenings. It brings discipline into my life.",
+        "message": null,
+        "choose_destination": null,
+        "anim": "Talking",
+        "look_at": "<unity_player_id>",
+        "send": null
+    },
+    {
+        "talk": "I love my friends. Let's talk!",
+        "message": null,
+        "choose_destination": null,
+        "anim": "Talking",
+        "look_at": "<unity_player_id>",
+        "send": null
+    },
+    {
+        "talk": null,
+        "message": null,
+        "choose_destination": "Sushi Restaurant",
+        "anim": "Walking",
+        "send": null
+    },
+    {
+        "talk": null,
+        "message": null,
+        "choose_destination": "Library",
+        "anim": "Walking",
+        "send": null
+    },
+    {
+        "talk": "Thanks, I'm glad you think so!",
+        "message": null,
+        "choose_destination": null,
+        "anim": "Talking",
+        "look_at": "<unity_player_id>",
+        "send": null
+    },
+    {
+        "talk": "That's great to hear! Being a postman must give you a lot of opportunities to interact with people.",
+        "message": null,
+        "choose_destination": null,
+        "anim": "Talking",
+        "look_at": "<unity_player_id>",
+        "send": null
+    },
+    {
+        "talk": "Sure, let's chat! What's the latest manga series you've been reading?",
+        "message": null,
+        "choose_destination": null,
+        "anim": "Talking",
+        "send": null
+    },
+    {
+        "talk": "Yeah, practicing kendo in the evenings brings so much discipline into my life!",
+        "message": null,
+        "choose_destination": null,
+        "anim": "Talking",
+        "send": null
+    },
+    {
+        "talk": null,
+        "message": null,
+        "choose_destination": "Sushi Restaurant",
+        "anim": "Walking",
+        "send": null
+    },
+    {
+        "talk": "I agree! It's really rewarding to interact with people every day.",
+        "message": null,
+        "choose_destination": null,
+        "anim": "Talking",
+        "send": null
+    },
+    {
+        "talk": null,
+        "message": null,
+        "choose_destination": "Izakaya Bar",
+        "anim": "Walking",
+        "send": null
+    },
+    {
+        "talk": "Yeah, it's great to love your job! It brings so much fulfillment.",
+        "message": null,
+        "choose_destination": null,
+        "anim": "Talking",
+        "send": null
+    },
+    {
+        "talk": "It's amazing to hear that, Richard! Interacting with people and hearing their stories is truly fulfilling.",
+        "message": null,
+        "choose_destination": null,
+        "anim": "Talking",
+        "send": null
+    }
+    
+]

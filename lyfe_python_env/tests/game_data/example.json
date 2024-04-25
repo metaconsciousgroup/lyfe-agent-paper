@@ -1,0 +1,199 @@
+{
+	"messageType": "GAME_DATA",
+    "lobby": {
+        "location":
+        {
+            "hashId": "location_id_abc_1234",
+            "name": "City (Day)",
+            "sceneName": "LevelCity - Day"
+        },
+        "characters": [
+            {
+                "modelPath": "https://models.readyplayer.me/64b06985c0cd89901193ed59.glb"
+            },
+            {
+                "modelPath": "https://models.readyplayer.me/64b068e6dd9942dce7fa044c.glb"
+            }
+        ]
+    },
+    "world": {
+        "agents": [
+            {
+                "hashId": "agent_001",
+                "user": {
+                    "hashId": "francesco_bianchi",
+                    "username": "ExampleAgent One"
+                },
+                "character": {
+                    "modelPath": "https://models.readyplayer.me/64b06985c0cd89901193ed59.glb"
+                },
+                "transform": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "rotation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    }
+                }
+            },
+            {
+                "hashId": "agent_002",
+                "user": {
+                    "hashId": "marta_rodriguez",
+                    "username": "ExampleAgent Two"
+                },
+                "character": {
+                    "modelPath": "https://models.readyplayer.me/64b068e6dd9942dce7fa044c.glb"
+                },
+                "transform": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 1
+                    },
+                    "rotation": {
+                        "x": 0,
+                        "y": 330,
+                        "z": 0
+                    }
+                }
+            },
+            {
+                "hashId": "agent_003",
+                "user": {
+                    "hashId": "3",
+                    "username": "ExampleAgent Three"
+                },
+                "character": {
+                    "modelPath": "https://models.readyplayer.me/64b06985c0cd89901193ed59.glb"
+                },
+                "transform": {
+                    "position": {
+                        "x": 2,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "rotation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    }
+                }
+            },
+            {
+                "hashId": "agent_004",
+                "user": {
+                    "hashId": "4",
+                    "username": "ExampleAgent Four"
+                },
+                "character": {
+                    "modelPath": "https://models.readyplayer.me/64b06985c0cd89901193ed59.glb"
+                },
+                "transform": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 3
+                    },
+                    "rotation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    }
+                }
+            },
+            {
+                "hashId": "agent_005",
+                "user": {
+                    "hashId": "5",
+                    "username": "ExampleAgent Five"
+                },
+                "character": {
+                    "modelPath": "https://models.readyplayer.me/64b06985c0cd89901193ed59.glb"
+                },
+                "transform": {
+                    "position": {
+                        "x": 4,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "rotation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    }
+                }
+            },
+            {
+                "hashId": "agent_006",
+                "user": {
+                    "hashId": "6",
+                    "username": "ExampleAgent Six"
+                },
+                "character": {
+                    "modelPath": "https://models.readyplayer.me/64b06985c0cd89901193ed59.glb"
+                },
+                "transform": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 5
+                    },
+                    "rotation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    }
+                }
+            },
+            {
+                "hashId": "agent_007",
+                "user": {
+                    "hashId": "7",
+                    "username": "ExampleAgent Seven"
+                },
+                "character": {
+                    "modelPath": "https://models.readyplayer.me/64b06985c0cd89901193ed59.glb"
+                },
+                "transform": {
+                    "position": {
+                        "x": 5,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "rotation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    }
+                }
+            },
+            {
+                "hashId": "agent_008",
+                "user": {
+                    "hashId": "8",
+                    "username": "ExampleAgent Eight"
+                },
+                "character": {
+                    "modelPath": "https://models.readyplayer.me/64b06985c0cd89901193ed59.glb"
+                },
+                "transform": {
+                    "position": {
+                        "x": 3,
+                        "y": 0,
+                        "z": 3
+                    },
+                    "rotation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    }
+                }
+            }
+        ]
+    }    
+}

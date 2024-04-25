@@ -1,0 +1,23 @@
+[
+    {
+        "talk": null,
+        "message": null,
+        "choose_destination": "ExampleAgent One",
+        "anim": "Talking",
+        "send": null
+    },
+    {
+        "talk": null,
+        "message": null,
+        "choose_destination": "ExampleAgent Two",
+        "anim": "Talking",
+        "send": null
+    },
+    {
+        "talk": null,
+        "message": null,
+        "choose_destination": "ExampleAgent Three",
+        "anim": "Talking",
+        "send": null
+    }
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "message": ["I love my job as a postman!", "<unity_player_id>"]
+    },
+    {
+        "message": ["Wow, that's awesome!", "<unity_player_id>"]
+    },
+    {
+        "message": ["Are you the player?", "<unity_player_id>"]
+    },
+    {
+        "message": ["Are you from the future?", "<unity_player_id>"]
+    },
+    {
+        "message": ["I'm DMing you, can you hear me?", "<unity_player_id>"]
+    },
+    {
+        "message": ["Hello???", "<unity_player_id>"]
+    },
+    {
+        "message": ["Am I living in a simulation?", "<unity_player_id>"]
+    }    
+]

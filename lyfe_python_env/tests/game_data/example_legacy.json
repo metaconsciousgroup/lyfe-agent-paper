@@ -1,0 +1,54 @@
+{
+    "environment": {
+      "address": "Assets/Prefabs/World/JapanTown.prefab"
+    },
+    "agents": {
+      "dict": {
+        "marta_rodriguez": {
+          "first_name": "Marta",
+          "last_name": "Rodriguez",
+          "prefab_path": "https://models.readyplayer.me/64b068e6dd9942dce7fa044c.glb"
+        },
+        "francesco_bianchi": {
+          "first_name": "Francesco",
+          "last_name": "Bianchi",
+          "prefab_path": "https://models.readyplayer.me/64b06985c0cd89901193ed59.glb"
+        },
+        "yi_huang": {
+          "first_name": "Yi",
+          "last_name": "Huang",
+          "prefab_path": "https://models.readyplayer.me/64b06bf4262ec73f1de3336a.glb"
+        },
+        "fatima_al_khouri": {
+          "first_name": "Fatima",
+          "last_name": "Al-Khouri",
+          "prefab_path": "https://models.readyplayer.me/64b06a0ac0cd89901193ee3a.glb"
+        },
+        "dmitri_ivanov": {
+          "first_name": "Dmitri",
+          "last_name": "Ivanov",
+          "prefab_path": "https://models.readyplayer.me/64b06a82c0cd89901193eebe.glb"
+        },
+        "richard_smith": {
+          "first_name": "Richard",
+          "last_name": "Smith",
+          "prefab_path": "https://models.readyplayer.me/64b06adac0cd89901193ef4a.glb"
+        },
+        "aaliyah_williams": {
+          "first_name": "Aaliyah",
+          "last_name": "Williams",
+          "prefab_path": "https://models.readyplayer.me/64b06b42dd9942dce7fa074a.glb"
+        },
+        "ravi_patel": {
+          "first_name": "Ravi",
+          "last_name": "Patel",
+          "prefab_path": "https://models.readyplayer.me/64b06b8e262ec73f1de332e6.glb"
+        },
+        "lizhi_chen": {
+          "first_name": "Lizhi",
+          "last_name": "Chen",
+          "prefab_path": "https://models.readyplayer.me/64d8e303c603b299c0fabf11.glb"
+        }
+      }
+    }
+  }

@@ -1,0 +1,12 @@
+{
+    "messageType": "GAME_DATA",
+    "world": {
+        "agents": [
+            {
+                "user": {
+                    "username": "Linus"
+                }
+            }
+        ]
+    }
+}
