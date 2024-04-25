@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd746dd24693bd24fa267ad40ac8c617, type: 3}
+  m_Name: App Config Environment - Server
+  m_EditorClassIdentifier: 
+  _kind: 1
+  _network:
+    _hostName: localhost
+    _portStandalone: 7777
+    _portWeb: 7778
+    _username: Player
+  _lobby: {fileID: 11400000, guid: f52086ca9368bfa4f8378897ae9206b8, type: 2}
+  _python: {fileID: 11400000, guid: d7c432b048352de45a3ea2d82f4d2408, type: 2}
+  _runInBackground: 1
+  _targetFrameRate: 60
+  _forcePythonConnection: 1
+  _showCharacterInformation: 1
+  _consoleMaxMessages: 500
+  _debugGame: {fileID: 11400000, guid: 3f795fc98ee94dc40be37effe39ddfc8, type: 2}
+  _debugNetwork: {fileID: 11400000, guid: 888a2f144a5f435479c47edbc7f05c04, type: 2}
+  _debugNetworkClient: {fileID: 11400000, guid: c8c7398a191ef7c4181ce87a25a128e0,
+    type: 2}
+  _debugPython: {fileID: 11400000, guid: ccc3e518e90da5e489134f3eb2bcf3d2, type: 2}
+  _debugAuthentication: {fileID: 11400000, guid: 369d163a96d17c34fb2ccd3f559e5fa9,
+    type: 2}
+  _creatorSettings: {fileID: 11400000, guid: 9a9d66dc1467d4e379d6661c52558d69, type: 2}

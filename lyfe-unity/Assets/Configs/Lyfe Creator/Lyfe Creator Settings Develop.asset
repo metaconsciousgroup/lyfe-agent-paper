@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40fc8889ce4ed074c8002232d81c6195, type: 3}
+  m_Name: Lyfe Creator Settings Develop
+  m_EditorClassIdentifier: 
+  _area:
+    _color: {fileID: 11400000, guid: 5b206dc085347ce4f8fbdb8022b5dc65, type: 2}
+    _prefab: {fileID: 8330225518362977726, guid: 38a5a4be80e71ae4cae05abab929b1fd,
+      type: 3}
+    _layerName: Invisible Objects
+  _shape:
+    _spriteCircle: {fileID: 21300000, guid: dcbc095125d7b4648935a92ef27826fc, type: 3}
+    _spriteRect: {fileID: 21300000, guid: 99e145e951744834da39a3bc4d1fb7cc, type: 3}

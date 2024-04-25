@@ -1,0 +1,157 @@
+{
+    "scene": {
+        "title": "City (Night)",
+        "name": "LevelCity - Night",
+        "channelPython": "421baec6-869e-4ff1-9949-e0716de6ef4c",
+        "channelUnity": "521baec6-869e-4ff1-9949-e0716de6ef4c",
+        "agents": [
+            {
+                "user": {
+                    "id": "agent_001",
+                    "username": "Francesco Bianchi"
+                },
+                "character": {
+                    "modelPath": "https://models.readyplayer.me/64b06985c0cd89901193ed59.glb"
+                },
+                "transform": {
+                    "position": {
+                        "x": -2,
+                        "y": 0,
+                        "z": -6
+                    },
+                    "rotation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    }
+                }
+            },
+            {
+                "user": {
+                    "id": "agent_002",
+                    "username": "Diana"
+                },
+                "character": {
+                    "modelPath": "https://models.readyplayer.me/64b068e6dd9942dce7fa044c.glb"
+                },
+                "transform": {
+                    "position": {
+                        "x": 5.5,
+                        "y": 0,
+                        "z": -9.5
+                    },
+                    "rotation": {
+                        "x": 0,
+                        "y": 330,
+                        "z": 0
+                    }
+                }
+            },
+            {
+                "user": {
+                    "id": "agent_003",
+                    "username": "Karl Krieger"
+                },
+                "character": {
+                    "modelPath": "https://models.readyplayer.me/64b0788ec0cd8990119402ab.glb"
+                },
+                "transform": {
+                    "position": {
+                        "x": -8.5,
+                        "y": 0,
+                        "z": -9
+                    },
+                    "rotation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    }
+                }
+            },
+            {
+                "user": {
+                    "id": "agent_004",
+                    "username": "Robert Krieger"
+                },
+                "character": {
+                    "modelPath": "https://models.readyplayer.me/64b0788ec0cd8990119402ab.glb"
+                },
+                "transform": {
+                    "position": {
+                        "x": -10,
+                        "y": 0,
+                        "z": -9
+                    },
+                    "rotation": {
+                        "x": 0,
+                        "y": 16,
+                        "z": 0
+                    }
+                }
+            },
+            {
+                "user": {
+                    "id": "agent_005",
+                    "username": "Lisa"
+                },
+                "character": {
+                    "modelPath": "https://models.readyplayer.me/64b07a8fdd9942dce7fa1ca3.glb"
+                },
+                "transform": {
+                    "position": {
+                        "x": -14,
+                        "y": 0,
+                        "z": 8
+                    },
+                    "rotation": {
+                        "x": 0,
+                        "y": 90,
+                        "z": 0
+                    }
+                }
+            },
+            {
+                "user": {
+                    "id": "agent_006",
+                    "username": "Alina"
+                },
+                "character": {
+                    "modelPath": "https://models.readyplayer.me/649796d338ad7f783a131868.glb"
+                },
+                "transform": {
+                    "position": {
+                        "x": 0.6,
+                        "y": 0,
+                        "z": 6.7
+                    },
+                    "rotation": {
+                        "x": 0,
+                        "y": 200,
+                        "z": 0
+                    }
+                }
+            },
+            {
+                "user": {
+                    "id": "agent_007",
+                    "username": "Lucky"
+                },
+                "character": {
+                    "modelPath": "https://models.readyplayer.me/64b0794ac0cd89901194038a.glb"
+                },
+                "transform": {
+                    "position": {
+                        "x": -16.6,
+                        "y": 0,
+                        "z": -9
+                    },
+                    "rotation": {
+                        "x": 0,
+                        "y": 30,
+                        "z": 0
+                    }
+                }
+            }
+        ]
+    }
+}

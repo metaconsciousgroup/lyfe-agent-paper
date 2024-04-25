@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3da2eddd0c8bf4957ad6c96a0b9570d3, type: 3}
+  m_Name: Leave templates
+  m_EditorClassIdentifier: 
+  _reasonTemplates:
+  - Heading out, off to {location}. Catch up later!
+  - Got to run, heading to {location}.
+  - Leaving for {location} now. See you later!
+  - Time to head to {location}. Bye for now!
+  - On my way to {location}. Will be back later.
+  - In a rush, need to be at {location} ASAP. Talk later!
+  - Stepping out to {location}. Let's chat later.
+  - Taking off to {location}. Reach out later!
+  - Gotta scoot to {location}. Catch you afterwards!
+  - Quick detour to {location}. Something came up.
+  - Apparently, I'm needed at {location}. See you after.

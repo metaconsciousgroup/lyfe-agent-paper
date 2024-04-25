@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 4e9ac9a3f44ea403e98ccd4c66a02ef4
+  m_SerializeEntries:
+  - m_GUID: 68e7c4893ffda2a40a12710cd415e1ea
+    m_Address: Assets/Scenes/Levels/Level - City - Night
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b2d946bf09ad4ad4087a0a882831cd9f
+    m_Address: Assets/Scenes/Levels/Level - City - Day
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b280ceaedcc054be3aa54c5d49ca39d3, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: fbbdba688c3d646d3a6225803c0baeb5, type: 2}
+    - {fileID: 11400000, guid: 6959c361cf7de4140a61f39d5ea43999, type: 2}

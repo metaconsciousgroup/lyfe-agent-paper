@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc3ee818924f45e380a6cbf77fb4d26, type: 3}
+  m_Name: ChatBubbleSettings
+  m_EditorClassIdentifier: 
+  _minDuration: 3.5
+  _fadeInDuration: 0.6
+  _fadeOutDuration: 0.2
+  _timeForCharacter: 0.1
+  _charLimit: -1
+  _maxWidth: 480
+  _minWidth: 110
+  _localPositionOffset: {x: 0, y: 1, z: 0}

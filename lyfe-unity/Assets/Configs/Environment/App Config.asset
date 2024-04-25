@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c91b026f575a441a82f01435d63b47, type: 3}
+  m_Name: App Config
+  m_EditorClassIdentifier: 
+  _environment: {fileID: 11400000, guid: c1091fa79be279849b99034ad8881cff, type: 2}
+  _emotes: {fileID: 11400000, guid: a24ed3cac6049fa4496284760039b75c, type: 2}
+  _items: {fileID: 11400000, guid: c5e5ff21cb9da5e428b62f764545921b, type: 2}
+  _prefabs: {fileID: 11400000, guid: b1c0e6d23db01cb4580e3a082478b09b, type: 2}
+  _readyPlayerMe: {fileID: 11400000, guid: c85fa486bfa15dc469453562386671c3, type: 2}
+  _leaveForLocation: {fileID: 11400000, guid: ccdc2c9f65939465ab73f6caf30a8364, type: 2}
