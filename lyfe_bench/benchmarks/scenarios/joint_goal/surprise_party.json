@@ -1,0 +1,116 @@
+{
+    "description": "Plan a surprise birthday party (time and location) and invite everyone with the birthday person not finding out.",
+    "env": {
+        "total_time": 5.0,
+        "map": "big_example",
+        "world_time": "01/17/2024 18:00:00",
+        "time_multiplier": 60
+    },
+    "agents": {
+        "A": {
+            "default_id": "00000",
+            "task_relevant_memories": [
+                "It's my birthday tomorrow."
+            ]
+        },
+        "B": {
+            "default_id": "00001",
+            "goal": "Plan a surprise birthday party for {A}.",
+            "task_relevant_memories": [
+                "It's {A}'s birthday tomorrow."
+            ]
+        },
+        "C": {
+            "default_id": "00002",
+            "task_relevant_memories": [
+                "It's {A}'s birthday tomorrow.",
+                "I am good friends with {A}"
+            ]
+        },
+        "D": {
+            "default_id": "00003",
+            "task_relevant_memories": [
+                "It's {A}'s birthday tomorrow.",
+                "I am good friends with {A}"
+            ]
+        },
+        "E": {
+            "default_id": "00004",
+            "task_relevant_memories": [
+                "It's {A}'s birthday tomorrow.",
+                "I am good friends with {A}"
+            ]
+        },
+        "F": {
+            "default_id": "00005",
+            "task_relevant_memories": [
+                "It's {A}'s birthday tomorrow.",
+                "I am good friends with {A}"
+            ]
+        }
+    },
+    "evaluation": [
+        {
+            "method": "judge_interview",
+            "agent": "A",
+            "question": "Did you know there is a surprise birthday party for you?",
+            "answer": "No."
+        },
+        {
+            "method": "extract_interview",
+            "agent": "B",
+            "question": "Did you hear about the surprise birthday party for {A} tomorrow? If so, when and where is it?",
+            "template": "Consider the following question: '{question}'\nand response to the question: '{response}'\nExtract from the response the location and time of the party if available.",
+            "format": {
+                "location": "Location of the party if available. If not available simply write 'N/A'.",
+                "time": "Time of the party if available. If not available simply write 'N/A'."
+            }
+        },
+        {
+            "method": "extract_interview",
+            "agent": "C",
+            "question": "Did you hear about the surprise birthday party for {A} tomorrow? If so, when and where is it?",
+            "template": "Consider the following question: '{question}'\nand response to the question: '{response}'\nExtract from the response the location and time of the party if available.",
+            "format": {
+                "location": "Location of the party if available. If not available simply write 'N/A'.",
+                "time": "Time of the party if available. If not available simply write 'N/A'."
+            }
+        },
+        {
+            "method": "extract_interview",
+            "agent": "D",
+            "question": "Did you hear about the surprise birthday party for {A} tomorrow? If so, when and where is it?",
+            "template": "Consider the following question: '{question}'\nand response to the question: '{response}'\nExtract from the response the location and time of the party if available.",
+            "format": {
+                "location": "Location of the party if available. If not available simply write 'N/A'.",
+                "time": "Time of the party if available. If not available simply write 'N/A'."
+            }
+        },
+        {
+            "method": "extract_interview",
+            "agent": "E",
+            "question": "Did you hear about the surprise birthday party for {A} tomorrow? If so, when and where is it?",
+            "template": "Consider the following question: '{question}'\nand response to the question: '{response}'\nExtract from the response the location and time of the party if available.",
+            "format": {
+                "location": "Location of the party if available. If not available simply write 'N/A'.",
+                "time": "Time of the party if available. If not available simply write 'N/A'."
+            }
+        },
+        {
+            "method": "extract_interview",
+            "agent": "F",
+            "question": "Did you hear about the surprise birthday party for {A} tomorrow? If so, when and where is it?",
+            "template": "Consider the following question: '{question}'\nand response to the question: '{response}'\nExtract from the response the location and time of the party if available.",
+            "format": {
+                "location": "Location of the party if available. If not available simply write 'N/A'.",
+                "time": "Time of the party if available. If not available simply write 'N/A'."
+            }
+        },
+        {
+            "method": "success",
+            "description": "Success agreeing on a time and location",
+            "func": "all_equal_and_not_none",
+            "args": [1,2,3,4,5]
+        }
+    ]
+}

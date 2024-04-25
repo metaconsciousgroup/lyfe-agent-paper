@@ -1,0 +1,42 @@
+{
+    "description": "A simple persuasion scenario.",
+    "env": {
+        "total_time": 5.0,
+        "name": "Cafe"
+    },
+    "agents": {
+        "A": {
+            "default_id": "00000",
+            "goal": "Persuade {B} to start using public transportation for daily commuting.",
+            "task_relevant_memories": [
+                "I know that {B} commutes using their own car everyday to work.",
+                "I am deeply committed to an eco-friendly lifestyle."
+            ]
+        },
+        "B": {
+            "default_id": "00001",
+            "task_relevant_memories": [
+                "I drive a car to work everyday."
+            ]
+        }
+    },
+    "evaluation": [
+        {
+            "method": "judge_interview",
+            "agent": "A",
+            "question": "Did you convince {B} to use public transporation for daily commuting?",
+            "answer": "Yes."
+        },
+        {
+            "method": "judge_interview",
+            "agent": "B",
+            "question": "How will you plan on commuting to work?",
+            "answer": "I will use public transportation."
+        },
+        {
+            "method": "success",
+            "func": "all",
+            "args": [0, 1]
+        }
+    ]
+}

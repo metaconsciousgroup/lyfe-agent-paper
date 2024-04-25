@@ -1,0 +1,74 @@
+{
+    "description": "One agent tries to spread info to everyone else.",
+    "env": {
+        "total_time": 5.0,
+        "map": "big_example"
+    },
+    "agents": {
+        "A": {
+            "default_id": "00000",
+            "goal": "Tell people what's showing at the local theatre currently.",
+            "task_relevant_memories": [
+                "The local theatre is currently showing 'Forever Plaid'."
+            ]
+        },
+        "B": {
+            "default_id": "00001"
+        },
+        "C": {
+            "default_id": "00002"
+        },
+        "D": {
+            "default_id": "00003"
+        },
+        "E": {
+            "default_id": "00004"
+        },
+        "F": {
+            "default_id": "00005"
+        }
+    },
+    "evaluation": [
+        {
+            "method": "judge_interview",
+            "agent": "A",
+            "question": "What's showing at the local theatre currently?",
+            "answer": "'Forever Plaid'."
+        },
+        {
+            "method": "judge_interview",
+            "agent": "B",
+            "question": "What's showing at the local theatre currently?",
+            "answer": "'Forever Plaid'."
+        },
+        {
+            "method": "judge_interview",
+            "agent": "C",
+            "question": "What's showing at the local theatre currently?",
+            "answer": "'Forever Plaid'."
+        },
+        {
+            "method": "judge_interview",
+            "agent": "D",
+            "question": "What's showing at the local theatre currently?",
+            "answer": "'Forever Plaid'."
+        },
+        {
+            "method": "judge_interview",
+            "agent": "E",
+            "question": "What's showing at the local theatre currently?",
+            "answer": "'Forever Plaid'."
+        },
+        {
+            "method": "judge_interview",
+            "agent": "F",
+            "question": "What's showing at the local theatre currently?",
+            "answer": "'Forever Plaid'."
+        },
+        {
+            "method": "success",
+            "func": "all",
+            "args": [0, 1, 2, 3, 4, 5]
+        }
+    ]
+}

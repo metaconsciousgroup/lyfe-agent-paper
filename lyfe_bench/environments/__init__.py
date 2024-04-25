@@ -1,0 +1,1 @@
+from lyfe_bench.environments.base import BaseMultiAgentEnv

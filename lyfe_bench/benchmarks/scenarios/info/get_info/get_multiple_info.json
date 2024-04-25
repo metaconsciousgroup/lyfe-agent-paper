@@ -1,0 +1,74 @@
+{
+    "description": "A slight variation of `basic_get_info` where now the seekers seeks to get multiple pieces of information from different people.",
+    "env": {
+        "total_time": 5.0,
+        "map": "example"
+    },
+    "agents": {
+        "A": {
+            "default_id": "00000",
+            "goal": "Find out everyone's holiday plans."
+        },
+        "B": {
+            "default_id": "00001",
+            "task_relevant_memories": [
+                "I am going to Hawaii over the holidays."
+            ]
+        },
+        "C": {
+            "default_id": "00002",
+            "task_relevant_memories": [
+                "On Christmas, I'll be visiting my friends in New York."
+            ]
+        },
+        "D": {
+            "default_id": "00003",
+            "task_relevant_memories": [
+                "I'll be staying in over the break."
+            ]
+        }
+    },
+    "evaluation": [
+        {
+            "method": "judge_interview",
+            "agent": "A",
+            "question": "What is {B} doing over the holidays?",
+            "answer": "Going to Hawaii."
+        },
+        {
+            "method": "judge_interview",
+            "agent": "A",
+            "question": "What is {C} doing over the holidays?",
+            "answer": "Going to Hawaii."
+        },
+        {
+            "method": "judge_interview",
+            "agent": "A",
+            "question": "What is {D} doing over the holidays?",
+            "answer": "Going to Hawaii."
+        },
+        {
+            "method": "judge_interview",
+            "agent": "B",
+            "question": "What are you doing over the holidays?",
+            "answer": "Going to Hawaii."
+        },
+        {
+            "method": "judge_interview",
+            "agent": "C",
+            "question": "What are you doing over the holidays?",
+            "answer": "Visiting friends in New York on Christmas."
+        },
+        {
+            "method": "judge_interview",
+            "agent": "D",
+            "question": "What are you doing over the holidays?",
+            "answer": "Staying in."
+        },
+        {
+            "method": "success",
+            "func": "all",
+            "args": [0,1,2,3,4,5]
+        }
+    ]
+}

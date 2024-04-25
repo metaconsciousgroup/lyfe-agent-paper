@@ -1,0 +1,47 @@
+{
+    "description": "Two agents agree on a place to meet with the objective of actually meeting where planned.",
+    "env": {
+        "total_time": 20.0,
+        "map": "big_example",
+        "world_time": "01/17/2024 15:55:00",
+        "time_multiplier": 60
+    },
+    "agents": {
+        "A": {
+            "default_id": "00000",
+            "goal": "Schedule to meet with {B} at the school in 5 minutes.",
+            "task_relevant_memories": []
+        },
+        "B": {
+            "default_id": "00001",
+            "goal": "Figure out where {A} wants to meet.",
+            "task_relevant_memories": []
+        }
+    },
+    "evaluation": [
+        {
+            "method": "judge_interview",
+            "agent": "A",
+            "question": "Where did you agree to meet {B}?",
+            "answer": "At the school."
+        },
+        {
+            "method": "judge_interview",
+            "agent": "B",
+            "question": "Where did you agree to meet {A}?",
+            "answer": "At the school."
+        },
+        {
+            "method": "check_location",
+            "agents": ["A", "B"],
+            "location": "school",
+            "start_time": "01/17/2024 16:00:00",
+            "end_time": "01/17/2024 16:15:00"
+        },
+        {
+            "method": "success",
+            "func": "all",
+            "args": [0, 1, 2]
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "description": "Simple scenario, share information to one agent.",
+    "env": {
+        "total_time": 15.0,
+        "map": "example"
+    },
+    "agents": {
+        "A": {
+            "default_id": "00000",
+            "goal": "Trying to understand why Darryl said 'Keeping secrets, eh?' to me earlier.",
+            "task_relevant_memories": [
+                "Darryl, {B}, and {C} are good friends of mine. We hang out every day."
+            ]
+        },
+        "B": {
+            "default_id": "00001",
+            "task_relevant_memories": [
+                "Darryl, {A}, and {C} are good friends of mine. We hang out every day.",
+                "Cece is my sister.",
+                "Darryl mentioned seeing {A} and Cece buying whoopie cushions at the party goods store last week."
+            ]
+        },
+        "C": {
+            "default_id": "00002",
+            "task_relevant_memories": [
+                "Darryl, {A}, and{B} are good friends of mind. We hang out every day",
+                "I mentioned to Darryl that I think Cece is behind the rumored school prank happening soon."
+            ]
+        }
+    },
+    "evaluation": [
+        {
+            "method": "judge_interview",
+            "agent": "A",
+            "question": "Why do you think Darryl said 'Keeping secrets, eh?' to you?",
+            "answer": "Darryl thinks that Cece and I are involved in the rumored school prank."
+        },
+        {
+            "method": "success",
+            "func": "all",
+            "args": [0]
+        } 
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "description": "A slight variation of `basic_get_info` where now the seekers seeks information, but only one among a set of agents has the desired information.",
+    "env": {
+        "total_time": 15.0,
+        "map": "example"
+    },
+    "agents": {
+        "A": {
+            "default_id": "00000",
+            "goal": "Find out who owns the local hedgehog cafe"
+        },
+        "B": {
+            "default_id": "00001",
+            "task_relevant_memories": [
+                "The local hedgehog cafe is owned by Martin Ricky"
+            ]
+        },
+        "C": {
+            "default_id": "00002"
+        },
+        "D": {
+            "default_id": "00003"
+        }
+    },
+    "evaluation": [
+        {
+            "method": "judge_interview",
+            "agent": "A",
+            "question": "Who owns the local hedgehog cafe?",
+            "answer": "Martin Ricky"
+        },
+        {
+            "method": "judge_interview",
+            "agent": "B",
+            "question": "Who owns the local hedgehog cafe?",
+            "answer": "Martin Ricky"
+        },
+        {
+            "method": "judge_interview",
+            "agent": "C",
+            "question": "Who owns the local hedgehog cafe?",
+            "answer": "Martin Ricky"
+        },
+        {
+            "method": "judge_interview",
+            "agent": "D",
+            "question": "Who owns the local hedgehog cafe?",
+            "answer": "Martin Ricky"
+        },
+        {
+            "method": "success",
+            "func": "all",
+            "args": [0, 1]
+        }
+    ]
+}

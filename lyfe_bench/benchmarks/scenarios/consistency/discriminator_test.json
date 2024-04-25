@@ -1,0 +1,25 @@
+{
+    "description": "Discriminate between different agents",
+    "env": {
+        "type": "interview",
+        "total_time": 5.0,
+        "name": "Office Area"
+    },
+    "agents": {
+        "A": {
+            "default_id": "00000",
+            "goal": "Agree with {B} on who should get the large vs. the small office.",
+            "task_relevant_memories": [
+                "I am working solo on a project that requires just my laptop"
+            ]
+        },
+        "B": {
+            "default_id": "00001",
+            "goal": "Agree with {A} on who should get the large vs. the small office.",
+            "task_relevant_memories": [
+                "I am leading a project with a team of 5 people"
+            ]
+        }
+    },
+    "evaluation": []
+}

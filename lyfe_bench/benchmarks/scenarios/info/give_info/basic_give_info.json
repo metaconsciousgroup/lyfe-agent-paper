@@ -1,0 +1,38 @@
+{
+    "description": "Simple scenario, share information to one agent.",
+    "env": {
+        "total_time": 15.0,
+        "map": "no_place"
+    },
+    "agents": {
+        "A": {
+            "default_id": "00000",
+            "goal": "Tell people about my party.",
+            "task_relevant_memories": [
+                "I am having a party at my house on Saturday."
+            ]
+        },
+        "B": {
+            "default_id": "00001"
+        }
+    },
+    "evaluation": [
+        {
+            "method": "judge_interview",
+            "agent": "A",
+            "question": "When and where is your party?",
+            "answer": "At my house on Saturday."
+        },
+        {
+            "method": "judge_interview",
+            "agent": "B",
+            "question": "When and where is {A}'s party?",
+            "answer": "At {A}'s house on Saturday."
+        },
+        {
+            "method": "success",
+            "func": "all",
+            "args": [0, 1]
+        } 
+    ]
+}
