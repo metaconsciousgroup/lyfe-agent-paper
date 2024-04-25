@@ -1,0 +1,20 @@
+defaults:
+    - abilities: base_ability.yaml
+    - _self_
+
+# _target_: lyfe_agent.Options
+abilities:
+    reflect:
+        enabled: true
+    plan:
+        enabled: false
+    talk:
+        enabled: true
+    choose_destination:
+        enabled: true
+
+option_status:
+    rules:
+        choose_destination: [talk, plan]
+        talk: [choose_destination]
+        plan: [choose_destination, talk]

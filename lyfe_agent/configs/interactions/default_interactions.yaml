@@ -1,0 +1,23 @@
+# NOTE: defining the sources is actually not necessary, since it comes from the class
+defaults:
+  # - llm_call: default_llm_call
+  - summary_interaction: default_summary_interaction
+  - _self_
+
+encode_talk:
+  _target_: lyfe_agent.EncodeTalk
+  sources: [name, encoders]
+  targets: [repetition_detector]
+
+sense_interaction:
+  _target_: lyfe_agent.SenseInteraction
+  sources:
+    - name
+    - location
+    - knowledge
+    - nearby_creature
+    - new_event_detector
+    - event_tracker
+    - encoders
+  targets: []
+  encoder_key: openai

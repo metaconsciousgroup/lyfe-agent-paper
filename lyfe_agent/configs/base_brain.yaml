@@ -1,0 +1,54 @@
+defaults:
+    - memory: default_memory.yaml
+    - langmodel: base_openai_gpt3_5.yaml
+    - inventory: base_inventory.yaml
+    - preference: base_preference.yaml  
+    - options: base_options.yaml
+    - chains: default_chains.yaml
+    - components: base_states.yaml
+    - interactions: default_interactions.yaml
+    - option_executor: default_option_executor.yaml
+    - _self_
+
+agent_state:
+    suspended_time: 1.5
+    prob_boredom: 0.0003 # 0.003 for lyfegame
+
+states:
+    options:
+        prob_repeat: 0.1 # so that agents can choose talk again
+        
+chains:
+    reflect:
+        collect_data: true
+    cognitive_controller:
+        collect_data: true
+        verbose: true
+    talk:
+        collect_data: true
+        verbose: true
+    choose_destination:
+        collect_data: true
+    message:
+        collect_data: true
+
+interactions:
+    summary_interaction:
+        chain:
+            collect_data: true
+            verbose: true
+            template: "Suppose you ARE the person, {name}, described below.
+                \nThe following summarizes what is going on right now: {summary}
+                \n
+                \nYour task is to update the summary in character, using recent observations and relevant memories, delimited by triple brackets below.
+                \nYou remember: ```\n{recentmem}\n{longmem}```\n
+                \nYou are currently {location}.
+                \nYou just observed: ```\n{workmem}```
+                \nYou received the following (possibly empty) feedback ```\n{feedback}```\n regarding what you are currently doing.\n
+                \nIntegrate your state of mind into the summary and emphasize information that is novel and minimize those that are not.
+                \nThe summary should include thoughts and summarize conversations you are having. Use first person perspective. Maintain a cohesive summary with fewer than 100 words: [SUMMARY]
+                "
+
+reward_model_type: arg_max # choose from [arg_max, neural_network, transformer], for now only arg_max is supported
+word_embedding_model: none # choose from [none, spacy, glove, ada], for now only spacy is supported
+

@@ -1,0 +1,39 @@
+defaults:
+    - memory_prompts: obsolete_memory_prompts.yaml
+    - _self_
+
+_target_: lyfe_agent.ThreeStageMemoryManager
+_partial_: true
+memory_modules:
+    workmem:
+        # _target_: lyfe_agent.MemoryStore
+        # _partial_: true
+        capacity: 4
+        metadata_types:
+            - generic
+            - visual
+            - audio
+            - spacial
+            - mental
+    recentmem:
+        # _target_: lyfe_agent.EmbeddingMemory
+        # _partial_: true
+        capacity: 10
+        num_memories_retrieved: 1
+        forgetting_algorithm: False
+        forgetting_threshold: 0.8
+    longmem:
+        # _target_: lyfe_agent.EmbeddingMemory
+        # _partial_: true
+        capacity: 1_000
+        num_memories_retrieved: 2
+        forgetting_algorithm: False
+        forgetting_threshold: 0.8
+
+    # TEMPORARY
+    obsbuffer:
+        # _target_: lyfe_agent.ObsBuffer
+        # _partial_: true
+        capacity: 6
+
+tick_limit: 1 # how frequently to update the recentmem

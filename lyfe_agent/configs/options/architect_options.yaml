@@ -1,0 +1,25 @@
+defaults:
+    - abilities: base_ability.yaml
+    - _self_
+
+# _target_: lyfe_agent.Options
+
+# can decide to make its own config
+abilities:
+    message:
+        description: send a message to a player
+        enabled: true
+    reflect:
+        description: reflect on the current situation
+        enabled: true
+    plan:
+        enabled: false
+
+# Needed so that message can be chosen after reflection
+prob_repeat: 1.0
+
+option_status:
+    rules:
+        choose_destination: [talk, plan]
+        talk: [choose_destination]
+        plan: [choose_destination, talk]

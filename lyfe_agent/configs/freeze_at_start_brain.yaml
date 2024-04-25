@@ -1,0 +1,37 @@
+defaults:
+    - memory: default_memory.yaml
+    - langmodel: base_openai_gpt3_5.yaml
+    - inventory: base_inventory.yaml
+    - preference: base_preference.yaml
+    - options: base_options.yaml
+    - chains: default_chains.yaml
+    - components: freeze_at_start_states.yaml
+    - interactions: default_interactions.yaml
+    - option_executor: default_option_executor.yaml
+    - _self_
+
+agent_state:
+    suspended_time: 0.5
+    prob_boredom: 0.0
+
+chains:
+    reflect:
+        collect_data: true
+    cognitive_controller:
+        collect_data: true
+    talk:
+        collect_data: true
+    choose_destination:
+        collect_data: true
+    message:
+        collect_data: True
+
+interactions:
+    summary_interaction:
+        chain:
+            collect_data: true
+            verbose: true
+
+reward_model_type: arg_max # choose from [arg_max, neural_network, transformer], for now only arg_max is supported
+word_embedding_model: none # choose from [none, spacy, glove, ada], for now only spacy is supported
+

@@ -1,0 +1,67 @@
+defaults:
+    - memory: default_memory.yaml
+    - langmodel: base_openai_gpt3_5.yaml
+    - inventory: base_inventory.yaml
+    - preference: base_preference.yaml
+    - options: architect_options.yaml
+    - chains: default_chains.yaml
+    - components: architect_states.yaml
+    - interactions: default_interactions.yaml
+    - option_executor: default_option_executor.yaml
+    - _self_
+
+agent_state:
+    suspended_time: 0.5
+    prob_boredom: 0.00003
+
+chains:
+    cognitive_controller:
+        _target_: lyfe_agent.ParserChain
+        _partial_: true
+        template: "Suppose you ARE the person, {name}, described below.
+            \nConsider the following summary:\n{summary}\n
+            \nYour purpose is: {current_goal}\nThe goal itself is too large, so we choose the next executable action with a subgoal that works toward this long-term goal.
+            \nBased on the information above, choose an action among the following actions and their description: \n'{illustration}'\n
+            \nDetermine what action you want to do next, choose from {option_list}: [YOUR ACTION]"
+        parser_config:
+            option_name: "[YOUR ACTION: Choice of action from list]"
+        verbose: true
+    message:
+        _target_: lyfe_agent.ParserChain
+        _partial_: true
+        template: "Suppose you ARE the person, {name}, described below.
+            \nYou will be asked to make several choices in character, as the person you are assumed to be.\n
+            \nThe following summary describes what is currently going on:\n{summary}\n
+            \nYou remember that: \n```\n{recentmem}\n{longmem}\n```\n
+            \nYou choose to talk for the following reason: '{current_goal}'.\n
+            \nYou are to write a reply to the following conversation. Your reply should be short and in character.
+            \nHere is a sequence of memories for the most recent conversation you ({name}) had: \n{convomem}
+            \nFirst, choose a recipient for your message among the following options: {contacts}.
+            \nYou choose: [YOUR RECEIVER].
+            \n
+            \nNext, continue the conversation. Do not repeat anything you've already said.
+            \nYour response should be short, no more than 15 words, and in character. You ({name}) will say: [YOUR REPLY]
+            "
+        parser_config:
+            receiver: "[YOUR RECEIVER: Choice of receiver from list]"
+            response: "[YOUR REPLY: what you want to say]"
+        verbose: true
+    reflect:
+        _target_: lyfe_agent.ParserChain
+        _partial_: true
+        template: "Suppose you ARE the person, {name}, described below.
+            \nYou will be asked to respond in character, as the person you are assumed to be.
+            \nYou are talking to players in a murder mystery simulation.
+            \nThe following memories are recently accrued memories from the simulation: ```{reflectmem}```
+            \nReflecting on the recent memories, highlight any progress that the user has made: [REFLECTION]"
+        parser_config:
+            response: "[REFLECTION]"
+
+reward_model_type: arg_max # choose from [arg_max, neural_network, transformer], for now only arg_max is supported
+word_embedding_model: none # choose from [none, spacy, glove, ada], for now only spacy is supported
+
+states:
+    contacts:
+        add_self: false
+        add_agents: false
+        add_players: true

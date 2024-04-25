@@ -1,0 +1,27 @@
+_target_: lyfe_agent.interactions.summary_interaction.SummaryInteraction
+sources:
+    - name
+    - executor
+    - summary_state
+    - agent_state
+    - llm
+    - memory
+    - data_collectors
+    - event_tracker
+chain:
+    template: "Suppose you ARE the person, {name}, described below.
+        \nThe following summarizes what is going on right now: {summary}
+        \nYour state of mind: {current_goal}
+        \n
+        \nYour task is to update the summary in character, using recent observations and relevant memories, delimited by triple brackets below.
+        \nYou remember: ```\n{recentmem}\n{longmem}```\n
+        \nYou are currently {location}.
+        \nYou just observed: ```\n{workmem}```\n
+        \nIntegrate your state of mind into the summary and emphasize information that is relevant to the state of mind and minimize those that are not.
+        \nThe summary should include thoughts and summarize conversations you are having. Use first person perspective. Maintain a cohesive summary with fewer than 100 words: [SUMMARY]
+        "
+    parser_config:
+        summary: "[SUMMARY]"
+    collect_data: False
+    verbose: True
+targets: []

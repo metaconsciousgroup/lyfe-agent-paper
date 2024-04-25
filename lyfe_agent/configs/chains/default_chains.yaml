@@ -1,0 +1,112 @@
+initialize_interview:
+    template: "Suppose you ARE the person, {name}, described below.
+        \nYou will be asked to make several choices in character, as the person you are assumed to be.\n
+        \nYou are asked the following question: {initial_question}
+        \nCome up with a summary using the following memories that attempt to address this question: ```\n{longmem}\n```
+        \nYour ({name}) summary here: 
+        "
+    parser_config:
+        summary: "[SUMMARY]"
+    collect_data: False
+
+# update_world_model:
+#     template: "Suppose you ARE the person, {name}, described below.
+#         \nThe following summarizes what is going on right now: {summary}
+#         \n
+#         \nYour task is to update the summary in character, using recent observations and relevant memories, delimited by triple brackets below.
+#         \nYou remember: ```\n{recentmem}\n{longmem}```\n
+#         \nPersonality: '{personality}'\n
+#         \nYou are currently {location}.
+#         \nYou just observed: ```\n{workmem}```\n
+#         \nIntegrate your state of mind into the summary and emphasize information that is novel and minimize those that are not.
+#         \nThe summary should include thoughts and summarize conversations you are having. Use first person perspective. Maintain a cohesive summary with fewer than 100 words: [SUMMARY]
+#         "
+#     parser_config:
+#         summary: "[SUMMARY]"
+#     collect_data: False
+
+cognitive_controller:
+    template: "Suppose you ARE the person, {name}, described below.
+        \nConsider the following summary:\n{summary}\n
+        \nHere are the newest things currently on your mind: ```\n{workmem}```\n
+        \nIt is {time} now and you are {location}. Here are people near you: {nearby_creature}.
+        \nBased on the information above, choose an action among the following actions and their description: \n'{illustration}'\n
+        \nDetermine what action you want to do next, choose from {option_list}: [YOUR ACTION]
+        \nAnd state a clear objective that you want to achieve in choosing this action, using no more than 15 words: [YOUR SUBGOAL]"
+    parser_config:
+        option_name: "[YOUR ACTION: Choice of action from list]"
+        option_goal: "[YOUR SUBGOAL: reply with what you want to do first]"
+    collect_data: False
+
+talk:
+    template: "Suppose you ARE the person, {name}, described below.
+        \nYou will be asked to make several choices in character, as the person you are assumed to be.\n
+        \nThe following summary describes what is currently going on:\n{summary}\n
+        \nYou remember that: \n```\n{recentmem}\n{longmem}\n```\n
+        \nPersonality: '{personality}'\n
+        \nThe following objective can influence the conversation: '{option_goal}'\n
+        \nYou are to write a reply to the following conversation. Your reply should be short and in character. Your reply can only be heard by {nearby_creature}.
+        \nHere is a sequence of memories for the most recent conversation you ({name}) had: \n{convomem}
+        \nYou ({name}) should respond to the latest conversation, sticking with your reason for speaking, by saying: [YOUR REPLY]
+        \n
+        \nThe response should be short, informal, and MUST be in character with the above personality. Above all, do not repeat yourself.
+        "
+    parser_config:
+        response: "[YOUR REPLY: what you want to say, using [NONE] if you have nothing new to say]"
+
+choose_destination:
+    template: "Suppose you ARE the person, {name}, described below.
+        \nYou will be asked to make several choices in character, as the person you are assumed to be.\n
+        \nThe following summary describes what is currently going on: \n{summary}\n
+        \nYou remember that: \n```\n{recentmem}\n{longmem}\n```\n
+        \nYou choose to {option_name} because '{option_goal}'.\n
+        \nNow, you are to choose a destination to go to. The available destination in this world are: {map}.
+        \nYou decide to go to: [LOCATION]
+        "
+
+    parser_config:
+        response: "[LOCATION]"
+    collect_data: False
+
+find_person:
+    template: "Suppose you ARE the person, {name}, described below.
+        \nYou will be asked to make several choices in character, as the person you are assumed to be.\n
+        \nThe following summary describes what is currently going on: \n{summary}\n
+        \nYou remember that: \n```\n{recentmem}\n{longmem}\n```\n
+        \nYou choose to {option_name} because '{option_goal}'.\n
+        \nNow, you are to choose a person to go to. The available people are: {others}.
+        \nYou decide to find: [PERSON]
+        "
+
+    parser_config:
+        response: "[PERSON]"
+    collect_data: False
+
+reflect:
+    template: "Suppose you ARE the person, {name}, described below.
+        \nYou will be asked to respond in character, as the person you are assumed to be.
+        \nYou just left a conversation that you initially entered with the following reason: {option_goal}
+        \n
+        \nThe following memories were accrued around the time of the conversation: ```{reflectmem}```
+        \nReflecting on the recent memories, produce a response that is no more than 20 words that highlights any important conclusions you have drawn: [REFLECTION]"
+    parser_config:
+        response: "[REFLECTION]"
+    collect_data: False
+
+message:
+    template: "Suppose you ARE the person, {name}, described below.
+        \nYou will be asked to make several choices in character, as the person you are assumed to be.\n
+        \nThe following summary describes what is currently going on:\n{summary}\n
+        \nYou remember that: \n```\n{recentmem}\n{longmem}\n```\n
+        \nYou choose to talk for the following reason: '{option_goal}'.\n
+        \nYou are to write a reply to the following conversation. Your reply should be short and in character.
+        \nHere is a sequence of memories for the most recent conversation you ({name}) had: \n{convomem}
+        \nFirst, choose a recipient for your message among the following options: {contacts}.
+        \nYou choose: [YOUR RECEIVER].
+        \n
+        \nNext, continue the conversation. Avoid making the conversation repetitive. Be aware of who said what. Your response should be short, no more than 15 words, and in character. You ({name}) will say: [YOUR REPLY]
+        "
+    parser_config:
+        receiver: "[YOUR RECEIVER: Choice of receiver from list]"
+        response: "[YOUR REPLY: what you want to say]"
+    collect_data: False

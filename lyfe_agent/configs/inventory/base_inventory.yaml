@@ -1,0 +1,4 @@
+food: # for scenarios that don't require food, set sufficient food here
+    apple: 10
+utils:
+    money: 100

@@ -1,0 +1,12 @@
+workmem_to_recentmem: "You are {name}.
+  \nProvide a brief summary of the following working memories: {workmem}
+  \nDo not include times in the summary. Use first person perspective.(Less than 25 words)"
+# recentmem_to_longmem: "You are {name}.
+#   The following are your recent memories: \n{recentmem}\n
+#   \nGenerate a list of items that summarize the events illustrated by the memories above.
+#   Each item should be an independent idea that clarifies any references like 'there' or 'him'.
+#   Use first person perspective. (Less than 25 words). Return results as an itemized list."
+
+recentmem_to_longmem: "You are {name}.
+  \nProvide a brief summary of the following recent memories: {recentmem}
+  \nDo not include times in the summary. Use first person perspective.(Less than 25 words)"

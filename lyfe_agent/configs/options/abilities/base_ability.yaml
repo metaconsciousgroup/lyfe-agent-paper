@@ -1,0 +1,58 @@
+cognitive_controller:
+    description: the most powerful controller of the agent, could choose any action
+    enabled: true
+    root: true
+reflect:
+    description: reflect on myself based on memory
+    enabled: false
+    root: true
+plan:
+    description: plan something to do in next 1 hours, ONLY if current goal is not clear
+    enabled: false
+goal: # actively think about what to do next
+    description: set a small goal about what to do in 2 minutes, with significant difference from before
+    enabled: false
+
+# receive: passive procedure, for now our agent cannot turn down an item received. Item received will be added to the agent's bag automatically.
+send:
+    description: give something in your bag to someone
+    enabled: false
+talk:
+    description: talk if being addressed or having something worth saying, do not choose if there is no one around
+    enabled: false
+    # TODO: a patch to make agent choose to move directly
+    sensitive_keywords:
+        - Let's go
+        - I want to go
+        - Let's head to
+        - head over
+        - head over to
+        - should head to
+        - head together
+message:
+    description: message or reply to someone on the phone. Especially when you are alone
+    enabled: false
+choose_destination:
+    description: choose a destination to go to
+    enabled: false
+deal_with_status:
+    description: deal with current status, like hunger, tiredness, illness, etc.
+    enabled: false
+find_person:
+    description: find a person who is not near you
+    enabled: false
+
+# tool use
+add_calendar_event:
+    description: add an event to calendar
+    enabled: false
+
+snooze_calendar_alarm:
+    description: snooze calendar alert, to be reminded a little later
+    enabled: false
+
+turn_off_calendar_alarm:
+    description: turn off calendar alert, choose only if you are sure you don't need to be reminded
+    enabled: false
+
+

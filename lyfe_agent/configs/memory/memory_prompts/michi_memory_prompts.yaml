@@ -1,0 +1,4 @@
+recentmem_to_longmem: "You are {name}.
+  \nCombine the following memories into a single cohesive summary: {recentmem}
+  \nClarify any references like 'there' or 'him'.
+  \nUse first person perspective. Focus on important things. (Less than 25 words)"

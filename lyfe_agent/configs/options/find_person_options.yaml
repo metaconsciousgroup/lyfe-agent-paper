@@ -1,0 +1,28 @@
+defaults:
+    - abilities: base_ability.yaml
+    - _self_
+
+# _target_: lyfe_agent.Options
+
+abilities:
+    reflect:
+        enabled: true
+    # Start with injected daily plan
+    plan:
+        enabled: false
+    talk:
+        enabled: true
+    # goal:
+    #     enabled: true
+    # message:
+    #     enabled: true
+    choose_destination:
+        enabled: true
+    find_person:
+        enabled: true
+
+option_status:
+    rules:
+        choose_destination: [talk, plan]
+        talk: [choose_destination]
+        plan: [choose_destination, talk]

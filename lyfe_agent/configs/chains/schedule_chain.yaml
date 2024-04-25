@@ -1,0 +1,119 @@
+update_world_model:
+    _target_: lyfe_agent.ParserChain
+    _partial_: true
+    template: "Suppose you ARE the person, {name}, described below.
+        \nThe following summarizes what is going on right now: {summary}
+        \nYour state of mind: {current_goal}
+        \n
+        \nYour task is to update the summary in character, using recent observations and relevant memories, delimited by triple brackets below.
+        \nYou remember: ```\n{recentmem}\n{longmem}```\n
+        \nYou are currently {location}.
+        \nYou just observed: ```\n{workmem}```\n
+        \nIntegrate your state of mind into the summary and emphasize information that is relevant to the state of mind and minimize those that are not.
+        \nThe summary should include thoughts and summarize conversations you are having. Use first person perspective. Maintain a cohesive summary with fewer than 100 words: [SUMMARY]
+        "
+    parser_config:
+        summary: "[SUMMARY]"
+    collect_data: False
+
+cognitive_controller:
+    _target_: lyfe_agent.ParserChain
+    _partial_: true
+    template:
+        # ------------ Version Before Schedule ------------
+        # "Suppose you ARE the person, {name}, described below.
+        # \nConsider the following summaries:\n{summary}\n
+        # \nHere are the newest things currently on your mind: ```\n{workmem}```\n
+        # \nYou remember: ```\n{recentmem}\n{longmem}```\n
+        # \nIt is {time} now and you are {location}. Here are people near you: {nearby_creature}.
+        # \nYour long-term goal is: {current_goal}\nThe goal itself is too large, so we choose the next executable action with a subgoal that works toward this long-term goal.
+        # \nBased on the information above, choose an action among the following actions and their description: \n'{illustration}'\n
+        # \nDetermine what action you want to do next, choose from {option_list}: [YOUR ACTION]
+        # \nAnd state a clear objective that you want to achieve in choosing this action, using no more than 15 words: [YOUR SUBGOAL]"
+        # # \nAnd state a clear reason for not choosing the other actions, using no more than 15 words: [YOUR REASON]
+        # # \nFor example: 'Talk about educational experiences.', 'Ask about the details.', 'Go to the library.', 'Listen to the lecture.', 'Decide what to do'
+        "Suppose you ARE the person, {name}, described below.
+        \nConsider the following summaries:\n{summary}\n
+        \nHere are the newest things currently on your mind: ```\n{workmem}```\n
+        \nYou remember: ```\n{recentmem}\n{longmem}```\n
+        \nIt is {time} now and you are {location}. Here are people near you: {nearby_creature}.
+        \nYour long-term goal is: {current_goal}
+        \nIt is {time} now, You want to do: {option_goal}
+        \nBased on the information above and time, choose an action among the following actions and their description: \n'{illustration}'\n
+        \nDetermine what action you want to do next, choose from {option_list}: [YOUR ACTION]
+        \nAnd [YOUR SUBGOAL]"
+    parser_config:
+        option_name: "[YOUR ACTION: Choice of action from list]"
+        option_goal: "[YOUR SUBGOAL: reply with what you want to do first]"
+
+talk:
+    _target_: lyfe_agent.ParserChain
+    _partial_: true
+    template: "Suppose you ARE the person, {name}, described below.
+        \nYou will be asked to make several choices in character, as the person you are assumed to be.\n
+        \nThe following summary describes what is currently going on:\n{summary}\n
+        \nYou remember that: \n```\n{recentmem}\n{longmem}\n```\n
+        \nYou choose to {option_name} for the following reason: '{option_goal}'.\n
+        \nYou are to write a reply to the following conversation. Your reply should be short and in character. Your reply can only be heard by {nearby_creature}.
+        \nHere is a sequence of memories for the most recent conversation you ({name}) had: \n{convomem}
+        \nYou ({name}) should respond to the latest conversation by saying: [YOUR REPLY]
+        "
+    parser_config:
+        response: "[YOUR REPLY: what you want to say, using [NONE] if you have nothing new to say]"
+
+choose_destination:
+    _target_: lyfe_agent.ParserChain
+    _partial_: true
+    template: "Suppose you ARE the person, {name}, described below.
+        \nYou will be asked to make several choices in character, as the person you are assumed to be.\n
+        \nThe following summary describes what is currently going on: \n{summary}\n
+        \nYou remember that: \n```\n{recentmem}\n{longmem}\n```\n
+        \nYou choose to {option_name} because '{option_goal}'.\n
+        \nNow, you are to choose a destination to go to. The available destination in this world are: {map}.
+        \nYou decide to go to: [LOCATION]
+        "
+
+    parser_config:
+        response: "[LOCATION]"
+
+message:
+    _target_: lyfe_agent.ParserChain
+    _partial_: true
+    template: "Suppose you ARE the person described below.
+        \n***You are: {name}.***
+        \n{innate}
+        \nYou choose to {option_name} because '{option_goal}'.\n
+        \nPlease answer the following questions:
+        \n------------
+        \nInstruction:
+        \nYou are to make several choices in character, as the person you are assumed to be.
+        \nYou are in a conversation. Your must come up with a response.
+        \nYour memories relevant to the conversation, delimited by triple backticks: ```\n{recentmem}\n{longmem}```
+        \nYour recent conversation history, delimited by triple backticks: ```\n{convomem}```
+        \nFirst, choose a recipient for your message among the following options: {contacts}.
+        \nYou choose: [YOUR RECEIVER].
+        \n
+        \nNext, continue the conversation. Avoid making the conversation repetitive. Your response should be short, no more than 15 words, and in character. You ({name}) will say: [YOUR REPLY]
+        "
+
+    parser_config:
+        receiver: "[YOUR RECEIVER: Choice of receiver from list]"
+        response: "[YOUR REPLY: what you want to say]"
+
+plan:
+    _target_: lyfe_agent.ParserChain
+    _partial_: true
+    template: "Suppose you ARE the person, {name}, described below.
+        \n{innate}
+        \nYou choose to {option_name} because '{option_goal}'.\n
+        \nHere are the abilities you have: {option_list}
+        \nAlong with the illustrations for each ability: {illustration}\n
+        \nBased on the information above, reply with a sequence of 3 subgoals.
+        \nEach subgoal is a step toward the long-term goal and can be achieved by one of the abilities above.
+        \nFor example: 'Go to the shopping mall.', 'Talk about educational experiences.', 'Ask about the details.', 'Go to the library.', 'Listen to the lecture.', 'Plan the future', etc.
+        "
+
+    parser_config:
+        goal_1: "[YOUR SUBGOAL 1]"
+        goal_2: "[YOUR SUBGOAL 2]"
+        goal_3: "[YOUR SUBGOAL 3]"

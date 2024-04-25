@@ -1,0 +1,94 @@
+cognitive_controller:
+  _target_: lyfe_agent.CognitiveControl
+  name: cognitive_controller
+  sources:
+    - llm_call
+    - data_collectors
+    - name
+    - agent_state
+
+talk:
+  # TODO: to create suitable class
+  _target_: lyfe_agent.Talk
+  name: talk
+  sources:
+    - event_tracker
+    - llm_call
+    - data_collectors
+    - talk_sensitive_keywords
+    # some sources for determining termination
+    - name
+    - agent_state
+  talk_sensitive_keywords:
+    - Let's go
+    - I want to go
+    - Let's head to
+    - head over
+    - head over to
+    - should head to
+    - head together
+
+choose_destination:
+  _target_: lyfe_agent.ChooseDestination
+  name: choose_destination
+  sources:
+    - llm_call
+    - data_collectors
+    - location
+    - schedule
+    - knowledge
+    - name
+    - agent_state
+
+message:
+  _target_: lyfe_agent.Message
+  name: message
+  sources:
+    - llm_call
+    - data_collectors
+    - contacts
+    - name
+    - agent_state
+
+reflect:
+  _target_: lyfe_agent.Reflect
+  name: reflect
+  sources:
+    - llm_call
+    - data_collectors
+    - event_tracker
+    - schedule
+    - name
+    - agent_state
+
+find_person:
+  _target_: lyfe_agent.FindPerson
+  name: find_person
+  sources:
+    - llm_call
+    - data_collectors
+    - location
+    - schedule
+    - nearby_creature
+    - contacts
+    - name
+    - agent_state
+
+plan:
+  _target_: lyfe_agent.Plan
+  name: plan
+  sources:
+    - llm_call
+    - data_collectors
+    - schedule
+    - name
+    - agent_state
+
+interview:
+  _target_: lyfe_agent.Interview
+  name: interview
+  sources:
+    - llm_call
+    - data_collectors
+    - name
+    - agent_state

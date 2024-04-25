@@ -1,0 +1,60 @@
+# Note: Instantiation order matters
+new_event_detector:
+  _target_: lyfe_agent.NewEventDetector
+  data: True
+
+nearby_creature:
+  _target_: lyfe_agent.SimpleState
+  datatype: list
+
+observable_entities:
+  _target_: lyfe_agent.SimpleState
+  datatype: dict
+
+current_time:
+  _target_: lyfe_agent.SimpleState
+  datatype: str
+
+event_tracker:
+  _target_: lyfe_agent.EventTracker
+  signal: True
+  update_frequency: 5
+
+current_option:
+  _target_: lyfe_agent.CurrentOption
+  option_name: cognitive_controller
+  option_goal: I need to do something
+
+# option_status:
+#   # _target_: lyfe_agent.OptionStatus
+#   rules:
+#     choose_destination: [talk, plan]
+#     talk: [choose_destination]
+#     plan: [choose_destination, talk]
+#   # args: [name, nearby_creature, observable_entities]
+
+location:
+  _target_: lyfe_agent.Location
+
+contacts:
+  _target_: lyfe_agent.ContactManager
+  add_self: false
+  add_agents: true
+  add_players: false
+  args: [name]
+
+option_history:
+  _target_: lyfe_agent.OptionHistory
+
+repetition_detector:
+  _target_: lyfe_agent.RepetitionDetector
+
+expiretime_detector:
+  _target_: lyfe_agent.ExpireTimeDetector
+  delta_time: 2.0 # unit: minute in real-world time
+  time_based_new_event: true
+
+summary_state:
+  _target_: lyfe_agent.SummaryState
+  keys: [summary] # I want to interpolate here since it depends on SummaryInteraction
+

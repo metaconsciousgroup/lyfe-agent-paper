@@ -1,0 +1,49 @@
+name: gen
+channels:
+    - anaconda # IMPORTANT TO ADD THIS FOR sentence_transformers
+    - conda-forge
+    - defaults
+dependencies:
+    - python==3.9
+    - pip
+    - openai # OpenAI API
+    - pytest
+    - pytest-mock
+    - pip:
+          - hydra-core # Meta AI hydra job/configuration management
+          - gymnasium # OpenAI/Farama Foundation Gym environment
+          - seaborn # seaborn plotting
+          - scikit-learn
+          - git+ssh://git@github.com/metaconsciousgroup/lyfe-python-env.git  # we'll see which one is better
+          # For developers
+          - pytest-mock
+          - django-environ
+          - shapely
+          - geopandas
+          - networkx
+          - langchain # alternative LLM: LangChain (compatible with GPT and Vicuna)
+          - faiss-cpu
+          - google-generativeai # alternative LLM: Google PaLM
+          - spacy
+          - sentence_transformers
+          - black
+          - python-dotenv # For loading .env files
+          - boto3 # For interaction with AWS
+          - lightning  # PyTorch Lightning
+          # Packages (maybe not the minimal set) to get sentence_transformer to work
+          - huggingface_hub
+          - numpy
+          - pandas
+          - pillow
+          - psutil
+          - scikit-learn
+          - scipy
+          - sentencepiece
+          - tiktoken
+          - tokenizers
+          - torch
+          - torchvision
+          - tqdm
+          - transformers
+          # Memory architecture
+          - pinecone-client

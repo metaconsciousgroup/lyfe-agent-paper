@@ -1,0 +1,6 @@
+_target_: langchain_openai.ChatOpenAI
+_partial_: true
+model_name: gpt-3.5-turbo
+temperature: 0.7 # default temperature
+max_retries: 5 # max retries for openai api
+request_timeout: 10 # timeout for openai api

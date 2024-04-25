@@ -1,0 +1,5 @@
+# range from (0, 10). the preference of the agent, the higher the value, the more the agent likes it. -> similar to Reward in RL
+food:
+    apple: 5
+utils:
+    money: 8
